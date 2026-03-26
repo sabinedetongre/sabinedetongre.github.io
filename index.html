@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabine Detongre — Expertise terrain. Résultats concrets.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:    #1B3A6B;
+    --navy2:   #2D5A9E;
+    --navy3:   #0E2244;
+    --gold:    #C8902A;
+    --gold2:   #E8B84B;
+    --cream:   #F8F6F1;
+    --light:   #EEF2F8;
+    --white:   #FFFFFF;
+    --grey:    #6B7280;
+    --text:    #1F2937;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ─────────────────────────────────────────────────────── */
+  .hero {
+    background: var(--navy3);
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 70% 50%, rgba(44,90,158,0.25) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 60% at 20% 80%, rgba(200,144,42,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* Diagonal line décoration */
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 45%;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(200,144,42,0.4) 30%, rgba(200,144,42,0.4) 70%, transparent);
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px 80px 80px;
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 0.9s ease both;
+  }
+
+  .hero-tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s both;
+  }
+
+  .monogram {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 96px;
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 8px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease 0.35s both;
+  }
+
+  .monogram span { color: var(--gold); }
+
+  .hero-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.45s both;
+  }
+
+  .hero-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease 0.55s both;
+  }
+
+  .hero-headline em {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .hero-slogan {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 56px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.65s both;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 16px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.75s both;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gold);
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    padding: 16px 28px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background: var(--gold2);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    padding: 16px 28px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  .hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 80px 80px 60px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease 0.6s both;
+  }
+
+  .stat {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 32px 28px;
+    transition: all 0.3s ease;
+  }
+
+  .stat:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(200,144,42,0.3);
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+  }
+
+  .hero-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.8s both;
+  }
+
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    background: rgba(255,255,255,0.04);
+    border-left: 2px solid var(--gold);
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    font-weight: 300;
+  }
+
+  .badge-dot {
+    width: 5px;
+    height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── ACCROCHE ─────────────────────────────────────────────────── */
+  .accroche {
+    background: var(--gold);
+    padding: 28px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .accroche-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--white);
+    letter-spacing: 0.02em;
+  }
+
+  .accroche-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+    font-weight: 300;
+    white-space: nowrap;
+  }
+
+  /* ── SECTION COMMUNE ──────────────────────────────────────────── */
+  section { padding: 100px 80px; }
+
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+
+  .section-title em { font-style: italic; color: var(--gold); }
+
+  .section-body {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--grey);
+    max-width: 640px;
+    font-weight: 300;
+  }
+
+  /* ── TUNNEL PARCOURS ──────────────────────────────────────────── */
+  .tunnel {
+    background: var(--navy);
+    padding: 100px 80px;
+  }
+
+  .tunnel .section-title { color: var(--white); }
+  .tunnel .section-body { color: rgba(255,255,255,0.55); }
+
+  .tunnel-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .tunnel-step {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 40px 32px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .tunnel-step:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(200,144,42,0.4);
+    transform: translateY(-4px);
+  }
+
+  .tunnel-step::after {
+    content: '→';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gold);
+    font-size: 20px;
+    z-index: 2;
+  }
+
+  .tunnel-step:last-child::after { display: none; }
+
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 300;
+    color: rgba(200,144,42,0.2);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .step-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .step-sub {
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .step-body {
+    font-size: 13px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.5);
+    font-weight: 300;
+  }
+
+  /* ── FORMATIONS GRID ──────────────────────────────────────────── */
+  .formations { background: var(--cream); }
+
+  .poles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .pole {
+    background: var(--white);
+    border-top: 3px solid var(--navy);
+    padding: 36px 32px;
+    transition: all 0.3s ease;
+  }
+
+  .pole:hover {
+    border-top-color: var(--gold);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(27,58,107,0.1);
+  }
+
+  .pole-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: var(--light);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .pole-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .pole-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .pole-list li {
+    font-size: 13px;
+    color: var(--grey);
+    font-weight: 300;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.4;
+  }
+
+  .pole-list li::before {
+    content: '—';
+    color: var(--gold);
+    flex-shrink: 0;
+    font-size: 11px;
+    margin-top: 2px;
+  }
+
+  .pole-financement {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--light);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  /* ── RESULTATS ────────────────────────────────────────────────── */
+  .resultats { background: var(--navy3); padding: 100px 80px; }
+
+  .resultats .section-title { color: var(--white); }
+  .resultats .section-body { color: rgba(255,255,255,0.5); }
+
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .result-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    padding: 40px;
+    transition: all 0.3s ease;
+  }
+
+  .result-card:hover {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(200,144,42,0.3);
+  }
+
+  .result-context {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .result-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+
+  .result-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .metric {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .metric-val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--gold);
+    min-width: 80px;
+    line-height: 1;
+  }
+
+  .metric-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  /* ── PROFIL ───────────────────────────────────────────────────── */
+  .profil {
+    background: var(--white);
+    padding: 100px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .profil-content {}
+
+  .profil-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.4;
+    margin: 32px 0;
+    padding-left: 24px;
+    border-left: 2px solid var(--gold);
+    font-style: italic;
+  }
+
+  .profil-clients {
+    margin-top: 32px;
+  }
+
+  .clients-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-bottom: 16px;
+  }
+
+  .clients-list {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.6;
+  }
+
+  .profil-certs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cert {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px;
+    background: var(--light);
+    border-left: 3px solid var(--navy);
+    transition: all 0.3s ease;
+  }
+
+  .cert:hover { border-left-color: var(--gold); }
+
+  .cert-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .cert-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+
+  .cert-sub {
+    font-size: 12px;
+    color: var(--grey);
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  /* ── FINANCEMENT ──────────────────────────────────────────────── */
+  .financement { background: var(--cream); }
+
+  .fin-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 60px;
+  }
+
+  .fin-card {
+    background: var(--white);
+    padding: 32px 24px;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .fin-card:hover {
+    border-bottom-color: var(--gold);
+    transform: translateY(-4px);
+  }
+
+  .fin-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .fin-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .fin-body {
+    font-size: 13px;
+    color: var(--grey);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* ── CONTACT ──────────────────────────────────────────────────── */
+  .contact {
+    background: var(--navy);
+    padding: 100px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .contact-left .section-title { color: var(--white); }
+  .contact-left .section-body { color: rgba(255,255,255,0.55); margin-bottom: 40px; }
+
+  .contact-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .contact-info:hover {
+    background: rgba(255,255,255,0.09);
+    border-color: rgba(200,144,42,0.4);
+  }
+
+  .ci-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .ci-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 4px;
+  }
+
+  .ci-value {
+    font-size: 15px;
+    color: var(--white);
+    font-weight: 400;
+  }
+
+  .contact-right {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 48px 40px;
+  }
+
+  .contact-right h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .contact-right p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 300;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .step-n {
+    width: 32px;
+    height: 32px;
+    background: var(--gold);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .step-text {
+    padding-top: 6px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .step-text strong {
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  /* ── FOOTER ───────────────────────────────────────────────────── */
+  footer {
+    background: var(--navy3);
+    padding: 32px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-left {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .footer-left strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .footer-right {
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ── NAV ──────────────────────────────────────────────────────── */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: rgba(14,34,68,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    transition: all 0.3s ease;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.08em;
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--gold) !important;
+    color: var(--white) !important;
+    padding: 10px 20px;
+    font-size: 12px !important;
+  }
+
+  /* ── ANIMATIONS ───────────────────────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── RESPONSIVE ───────────────────────────────────────────────── */
+  @media (max-width: 1100px) {
+    nav { padding: 16px 40px; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-right { padding: 40px 40px 80px; }
+    .hero-left { padding: 120px 40px 40px; }
+    .hero::after { display: none; }
+    section { padding: 70px 40px; }
+    .tunnel { padding: 70px 40px; }
+    .resultats { padding: 70px 40px; }
+    .profil { grid-template-columns: 1fr; padding: 70px 40px; gap: 48px; }
+    .contact { grid-template-columns: 1fr; padding: 70px 40px; gap: 48px; }
+    footer { padding: 24px 40px; }
+    .accroche { padding: 28px 40px; flex-direction: column; align-items: flex-start; gap: 16px; }
+    .poles-grid { grid-template-columns: 1fr 1fr; }
+    .tunnel-steps { grid-template-columns: 1fr 1fr; }
+    .tunnel-step::after { display: none; }
+    .fin-grid { grid-template-columns: 1fr 1fr; }
+    .results-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    section { padding: 60px 24px; }
+    .tunnel { padding: 60px 24px; }
+    .resultats { padding: 60px 24px; }
+    .profil { padding: 60px 24px; }
+    .contact { padding: 60px 24px; }
+    footer { padding: 20px 24px; flex-direction: column; gap: 8px; text-align: center; }
+    .accroche { padding: 24px; }
+    .accroche-text { font-size: 22px; }
+    .poles-grid { grid-template-columns: 1fr; }
+    .tunnel-steps { grid-template-columns: 1fr; }
+    .fin-grid { grid-template-columns: 1fr 1fr; }
+    .hero-headline { font-size: 38px; }
+    .section-title { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo"><span>S</span>D</a>
+  <ul class="nav-links">
+    <li><a href="#formations">Formations</a></li>
+    <li><a href="#resultats">Résultats</a></li>
+    <li><a href="#profil">Profil</a></li>
+    <li><a href="#financement">Financement</a></li>
+    <li><a href="#contact" class="nav-cta">Prendre contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding:0;">
+  <div class="hero-left">
+    <p class="hero-tag">Consultante · Ingénieure Pédagogique RNCP · CEP Certifiée</p>
+    <div class="monogram">S<span>D</span></div>
+    <p class="hero-name">Sabine Detongre</p>
+    <h1 class="hero-headline">Gagnez du temps.<br><em>Structurez vos équipes.</em><br>Intégrez l'IA.</h1>
+    <p class="hero-slogan">Expertise terrain. Résultats concrets.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary">Prendre contact →</a>
+      <a href="#formations" class="btn-secondary">Voir les formations</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-num">25</div>
+        <div class="stat-label">ans d'expérience terrain</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">30+</div>
+        <div class="stat-label">programmes de formation</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5</div>
+        <div class="stat-label">pôles métiers couverts</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">finançable CPF & OPCO</div>
+      </div>
+    </div>
+    <div class="hero-badges">
+      <div class="badge"><div class="badge-dot"></div>Licence Ingénierie Pédagogique RNCP</div>
+      <div class="badge"><div class="badge-dot"></div>CEP — Conseil en Évolution Professionnelle</div>
+      <div class="badge"><div class="badge-dot"></div>Auditrice Qualiopi — Portage CEM</div>
+      <div class="badge"><div class="badge-dot"></div>Certification IA en cours (RS France Compétences)</div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCROCHE BANDE -->
+<div class="accroche">
+  <p class="accroche-text">J'aide les entreprises à recruter, manager et intégrer l'IA.</p>
+  <p class="accroche-sub">Martigues — Région PACA & interventions nationales</p>
+</div>
+
+<!-- TUNNEL PARCOURS -->
+<section class="tunnel" id="parcours">
+  <p class="section-eyebrow">Le parcours complet</p>
+  <h2 class="section-title">De la réflexion<br>à la <em>performance</em></h2>
+  <p class="section-body">Un écosystème unique : de la réflexion sur votre projet jusqu'à la maîtrise des outils IA. Un interlocuteur. Un fil conducteur. Des résultats mesurables.</p>
+
+  <div class="tunnel-steps">
+    <div class="tunnel-step">
+      <div class="step-num">01</div>
+      <div class="step-title">Bilan de compétences</div>
+      <div class="step-sub">Via CEM / Qualiopi</div>
+      <div class="step-body">Je sais qui je suis, ce que je vaux et où je veux aller. 24h, financement CPF 100%.</div>
+    </div>
+    <div class="tunnel-step">
+      <div class="step-num">02</div>
+      <div class="step-title">CEP</div>
+      <div class="step-sub">Certifiée RNCP</div>
+      <div class="step-body">Je construis mon projet professionnel avec un conseiller expert. Service gratuit.</div>
+    </div>
+    <div class="tunnel-step">
+      <div class="step-num">03</div>
+      <div class="step-title">Formation</div>
+      <div class="step-sub">30+ programmes</div>
+      <div class="step-body">J'acquiers les compétences pour atteindre mes objectifs. Management, IA, recrutement, commerce.</div>
+    </div>
+    <div class="tunnel-step">
+      <div class="step-num">04</div>
+      <div class="step-title">Performance</div>
+      <div class="step-sub">Résultats mesurables</div>
+      <div class="step-body">Je mets en œuvre avec un plan d'action 30 jours. Résultats mesurables dès la semaine suivante.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATIONS -->
+<section class="formations" id="formations">
+  <p class="section-eyebrow">Catalogue formations</p>
+  <h2 class="section-title">5 pôles métiers,<br><em>30+ programmes</em></h2>
+  <p class="section-body">Toutes les formations sont disponibles en intra, en inter ou sur-mesure. Présentiel ou distanciel. Financement OPCO, CPF, PDC.</p>
+
+  <div class="poles-grid">
+    <div class="pole">
+      <div class="pole-num">01</div>
+      <div class="pole-title">Management, RH & Soft Skills</div>
+      <ul class="pole-list">
+        <li>Management opérationnel & à distance</li>
+        <li>Gestion des conflits & RPS</li>
+        <li>Recruter & conduire les entretiens RH</li>
+        <li>Formation de formateur</li>
+        <li>Conduite du changement</li>
+        <li>Marque employeur</li>
+      </ul>
+      <div class="pole-financement">OPCO · PDC · CPF</div>
+    </div>
+    <div class="pole">
+      <div class="pole-num">02</div>
+      <div class="pole-title">Performance CHR & Événementiel terrain</div>
+      <ul class="pole-list">
+        <li>Parcours client & fidélisation restaurant</li>
+        <li>Réservations & visibilité Google</li>
+        <li>Organisation interne & fluidité service</li>
+        <li>Parcours complet performance restaurant</li>
+        <li>Activité événementielle & œnotourisme</li>
+      </ul>
+      <div class="pole-financement">OPCO · PDC · Fonds propres</div>
+    </div>
+    <div class="pole">
+      <div class="pole-num">03</div>
+      <div class="pole-title">Performance commerciale</div>
+      <ul class="pole-list">
+        <li>Techniques de vente modernes + IA</li>
+        <li>IA appliquée à la performance commerciale</li>
+        <li>Prise de parole en public</li>
+        <li>Conduite de réunion</li>
+        <li>Motiver son équipe commerciale</li>
+      </ul>
+      <div class="pole-financement">OPCO · CPF · PDC</div>
+    </div>
+    <div class="pole" style="border-top-color: var(--gold);">
+      <div class="pole-num">04</div>
+      <div class="pole-title">IA Métier — Le cœur différenciant</div>
+      <ul class="pole-list">
+        <li>IA de A à Z pour managers & commerciaux</li>
+        <li>IA appliquée au recrutement (3 formats)</li>
+        <li>IA appliquée HCR & Événementiel</li>
+        <li>Atelier marché de l'emploi avec l'IA</li>
+        <li>Management opérationnel à l'ère de l'IA</li>
+      </ul>
+      <div class="pole-financement">OPCO · AKTO · CPF · PDC</div>
+    </div>
+    <div class="pole" style="border-top-color: var(--gold);">
+      <div class="pole-num">05</div>
+      <div class="pole-title">Accompagnement individuel — L'exclusif</div>
+      <ul class="pole-list">
+        <li>Bilan de compétences (Qualiopi / CEM)</li>
+        <li>CEP — Conseil en Évolution Professionnelle</li>
+        <li>Évolution professionnelle — De salarié à entrepreneur</li>
+      </ul>
+      <div class="pole-financement">CPF 100% · Service CEP gratuit</div>
+    </div>
+    <div class="pole" style="background: var(--navy); border-top-color: var(--gold);">
+      <div class="pole-num" style="color: rgba(200,144,42,0.3);">?</div>
+      <div class="pole-title" style="color: var(--white);">Un besoin spécifique ?</div>
+      <p style="font-size:14px; color:rgba(255,255,255,0.6); font-weight:300; line-height:1.6; margin-bottom:24px;">Chaque programme est adaptable à votre secteur, votre effectif et vos objectifs. Devis personnalisé sous 48h.</p>
+      <a href="#contact" class="btn-primary" style="display:inline-block; font-size:12px;">Demander un devis →</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTATS -->
+<section class="resultats" id="resultats">
+  <p class="section-eyebrow">Résultats clients</p>
+  <h2 class="section-title">Ce que nos formations<br><em>changent concrètement</em></h2>
+  <p class="section-body">Des résultats mesurés, sur le terrain, dans les semaines qui suivent la formation.</p>
+
+  <div class="results-grid">
+    <div class="result-card">
+      <div class="result-context">Restaurant bistronomique · Aix-en-Provence · 45 couverts</div>
+      <div class="result-title">Formation Réservations & Visibilité Google</div>
+      <div class="result-metrics">
+        <div class="metric">
+          <div class="metric-val">62%</div>
+          <div class="metric-label">de réservations directes (vs 15% avant)</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">2 880€</div>
+          <div class="metric-label">de commissions économisées en 12 mois</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">48h</div>
+          <div class="metric-label">délai de mise en œuvre</div>
+        </div>
+      </div>
+    </div>
+    <div class="result-card">
+      <div class="result-context">Brasserie traditionnelle · Avignon · 80 couverts</div>
+      <div class="result-title">Formation Parcours client & Fidélisation</div>
+      <div class="result-metrics">
+        <div class="metric">
+          <div class="metric-val">+29%</div>
+          <div class="metric-label">de panier moyen (22€ → 28,50€)</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">×4</div>
+          <div class="metric-label">d'avis Google en 6 mois (47 → 183)</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">+23%</div>
+          <div class="metric-label">de CA global en 8 mois</div>
+        </div>
+      </div>
+    </div>
+    <div class="result-card">
+      <div class="result-context">Restaurant gastronomique · Salon-de-Provence · 35 couverts</div>
+      <div class="result-title">Parcours complet Performance Restaurant (10h30)</div>
+      <div class="result-metrics">
+        <div class="metric">
+          <div class="metric-val">+31%</div>
+          <div class="metric-label">de rentabilité nette sur l'année</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">3 200€</div>
+          <div class="metric-label">de commissions économisées</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">&lt;2 mois</div>
+          <div class="metric-label">ROI récupéré</div>
+        </div>
+      </div>
+    </div>
+    <div class="result-card" style="background: rgba(200,144,42,0.06); border-color: rgba(200,144,42,0.2);">
+      <div class="result-context">Formations IA Métier · Tous secteurs</div>
+      <div class="result-title">Ce que les participants constatent dès J+7</div>
+      <div class="result-metrics">
+        <div class="metric">
+          <div class="metric-val">−5h</div>
+          <div class="metric-label">de tâches administratives par semaine</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">−40%</div>
+          <div class="metric-label">de time-to-hire (recrutement)</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">10×</div>
+          <div class="metric-label">plus vite en production de contenu</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFIL -->
+<section class="profil" id="profil">
+  <div class="profil-content">
+    <p class="section-eyebrow">Votre intervenante</p>
+    <h2 class="section-title">Sabine<br><em>Detongre</em></h2>
+    <p class="section-body">Fondatrice. Chef d'entreprise. Ingénieure pédagogique. CEP certifiée. 25 ans de terrain commercial, RH et managérial.</p>
+    <blockquote class="profil-quote">
+      "Je ne viens pas du monde de la formation. Je viens du terrain. C'est ce qui fait la différence."
+    </blockquote>
+    <div class="profil-clients">
+      <p class="clients-label">Clients de référence</p>
+      <p class="clients-list">Bel · Barilla · Kraft Foods · Lactalis · P&G<br>SEB Philips · Carrefour · Sara Lee · Procter & Gamble</p>
+    </div>
+  </div>
+  <div class="profil-certs">
+    <div class="cert">
+      <div class="cert-icon">🎓</div>
+      <div>
+        <div class="cert-title">Licence Ingénierie Pédagogique RNCP</div>
+        <div class="cert-sub">Conception et animation de dispositifs de formation professionnelle</div>
+      </div>
+    </div>
+    <div class="cert">
+      <div class="cert-icon">🧭</div>
+      <div>
+        <div class="cert-title">CEP Certifiée RNCP</div>
+        <div class="cert-sub">Conseil en Évolution Professionnelle — accompagnement individuel certifié</div>
+      </div>
+    </div>
+    <div class="cert">
+      <div class="cert-icon">✅</div>
+      <div>
+        <div class="cert-title">Auditrice Qualiopi</div>
+        <div class="cert-sub">Formations sous Qualiopi via portage CEM — éligibles OPCO & CPF</div>
+      </div>
+    </div>
+    <div class="cert">
+      <div class="cert-icon">🤖</div>
+      <div>
+        <div class="cert-title">Certification IA en cours</div>
+        <div class="cert-sub">RS France Compétences — spécialisation IA appliquée aux métiers</div>
+      </div>
+    </div>
+    <div class="cert">
+      <div class="cert-icon">📍</div>
+      <div>
+        <div class="cert-title">Martigues — Région PACA</div>
+        <div class="cert-sub">Interventions nationales sur demande · Présentiel & distanciel</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINANCEMENT -->
+<section class="financement" id="financement">
+  <p class="section-eyebrow">Financement</p>
+  <h2 class="section-title">Zéro obstacle<br><em>pour se former</em></h2>
+  <p class="section-body">Toutes les formations sont éligibles à des dispositifs de financement. Dans la plupart des cas, il n'y a aucun reste à charge.</p>
+
+  <div class="fin-grid">
+    <div class="fin-card">
+      <div class="fin-icon">🏢</div>
+      <div class="fin-title">OPCO</div>
+      <div class="fin-body">Pour les salariés. Selon votre branche professionnelle (AKTO, ATLAS, AFDAS, OPCO EP…). Zéro impact sur votre plan de formation.</div>
+    </div>
+    <div class="fin-card">
+      <div class="fin-icon">💳</div>
+      <div class="fin-title">CPF</div>
+      <div class="fin-body">Pour tous les actifs. Bilan de compétences 100% financé. Formations éligibles selon programme. Montage géré avec vous.</div>
+    </div>
+    <div class="fin-card">
+      <div class="fin-icon">🏛️</div>
+      <div class="fin-title">France Travail</div>
+      <div class="fin-body">AIF pour les demandeurs d'emploi. Maintien des droits ARE. Conseil Régional selon éligibilité.</div>
+    </div>
+    <div class="fin-card">
+      <div class="fin-icon">📋</div>
+      <div class="fin-title">Plan de formation</div>
+      <div class="fin-body">Pour les entreprises. Budget formation de l'entreprise. Devis et convention de formation fournis sous 48h.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" style="padding-top:100px;">
+  <div class="contact-left">
+    <p class="section-eyebrow" style="color:rgba(200,144,42,0.8);">Contact</p>
+    <h2 class="section-title">On en parle ?</h2>
+    <p class="section-body">Un entretien de positionnement de 30 minutes — gratuit, sans engagement — pour analyser vos besoins et voir si je peux vous aider.</p>
+    <div class="contact-infos">
+      <a href="tel:+33789521175" class="contact-info">
+        <div class="ci-icon">📞</div>
+        <div>
+          <div class="ci-label">Téléphone</div>
+          <div class="ci-value">07 89 52 11 75</div>
+        </div>
+      </a>
+      <a href="mailto:contact@sabinedetongre.fr" class="contact-info">
+        <div class="ci-icon">✉️</div>
+        <div>
+          <div class="ci-label">Email</div>
+          <div class="ci-value">contact@sabinedetongre.fr</div>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/sabinedetongre" target="_blank" class="contact-info">
+        <div class="ci-icon">💼</div>
+        <div>
+          <div class="ci-label">LinkedIn</div>
+          <div class="ci-value">linkedin.com/in/sabinedetongre</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="contact-right">
+    <h3>Comment ça se passe ?</h3>
+    <p>Simple, rapide, sans jargon. Voici les étapes.</p>
+    <div class="steps-list">
+      <div class="step-item">
+        <div class="step-n">1</div>
+        <div class="step-text"><strong>Entretien de positionnement</strong> — 30 min, gratuit. J'analyse vos besoins, votre contexte, votre budget.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-n">2</div>
+        <div class="step-text"><strong>Proposition sur-mesure</strong> — Devis détaillé et convention de formation sous 48h.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-n">3</div>
+        <div class="step-text"><strong>Démarrage sous 2 à 4 semaines</strong> — Après signature. Accès rapide possible sur demande.</div>
+      </div>
+      <div class="step-item">
+        <div class="step-n">+</div>
+        <div class="step-text"><strong>Suivi J+30 (optionnel)</strong> — Session de consolidation ou coaching individuel.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left"><strong>Sabine Detongre</strong> — Expertise terrain. Résultats concrets.</div>
+  <div class="footer-right">Organisme déclaré DREETS PACA · Qualiopi via CEM · TVA non applicable Art. 293B CGI</div>
+</footer>
+
+</body>
+</html>
